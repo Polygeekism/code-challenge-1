@@ -14,16 +14,14 @@ $(document).ready(function () {
         $(this).closest('div').remove();
     });
     $('body').on('click', '.swap', function () {
-        //$(this).parent().css('background-color', 'yellow');
-        if (($this).parent().css('background-color') === 255,0,0) {
-            $(this).parent().css('background-color')= 255,255,0;
+        if ($(this).parent().css('background-color') === 'rgb(255, 0, 0)') {
+            $(this).parent().css('background-color', 'rgb(255, 255, 0)');
         }
-        else if($(this).parent().css('background-color') === 255,255,0){
-            $(this).parent().css('background-color') = 255,0,0;
-        }
-
+        //needed to use RGB values because of things
+        else if ($(this).parent().css('background-color') === 'rgb(255, 255, 0)')
+            $(this).parent().css('background-color', 'rgb(255, 0, 0)');
     });
-    
+
 
     //add a button labeled generate to the DOM
     $('body').append('<button class="buttonGenerate">Generate</button>');
