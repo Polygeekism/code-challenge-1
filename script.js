@@ -14,14 +14,17 @@ $(document).ready(function () {
         $(this).closest('div').remove();
     });
     $('body').on('click', '.swap', function () {
-        if($(this).closest('div').css('background-color', 'red')){
-            $(this).closest('div').css('background-color', 'yellow');
+        //$(this).parent().css('background-color', 'yellow');
+        if (($this).parent().css('background-color') === 255,0,0) {
+            $(this).parent().css('background-color')= 255,255,0;
         }
-        else if($(this).closest('div').css('background-color', 'yellow')){
-            $(this).closest('div').css('background-color', 'red');
+        else if($(this).parent().css('background-color') === 255,255,0){
+            $(this).parent().css('background-color') = 255,0,0;
         }
 
     });
+    
+
     //add a button labeled generate to the DOM
     $('body').append('<button class="buttonGenerate">Generate</button>');
 });
