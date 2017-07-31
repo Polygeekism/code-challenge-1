@@ -7,7 +7,8 @@ $(document).ready(function(){
     $('body').on('click', '.buttonGenerate', function(){
         howManyClicks++;
         $('body').append('<div>'+ '<p>' + howManyClicks +
-        '</p>' + '</div>');
+        '</p>' + '<button class="swap">Swap</button>' +
+        '<button class="delete">Delete</button>' + '</div>');
     });
     //add a button labeled generate to the DOM
     $('body').append('<button class="buttonGenerate">Generate</button>');
