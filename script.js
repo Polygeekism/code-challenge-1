@@ -10,6 +10,9 @@ $(document).ready(function(){
         '</p>' + '<button class="swap">Swap</button>' +
         '<button class="delete">Delete</button>' + '</div>');
     });
+    $('body').on('click', '.delete',function(){
+        $(this).closest('div').remove();
+    });
     //add a button labeled generate to the DOM
     $('body').append('<button class="buttonGenerate">Generate</button>');
 });
